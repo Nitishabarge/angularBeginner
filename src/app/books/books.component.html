@@ -1,31 +1,13 @@
 
-<button (click)="isShowing= !isShowing">
-    
-<!-- <span *ngIf="!isShowing">show</span>
-<span *ngIf="isShowing">hide</span> -->
-<!-- but i dont want to show span or any other elemenet inside button -->
-<ng-container *ngIf="!isShowing">show</ng-container>
-<ng-container *ngIf="isShowing">hide</ng-container>
-</button>
-
-<ul *ngIf="isShowing">
-    <li>
-        <img src="{{src}}" alt="{{name}}" width="100">
-        {{name | titlecase}} by {{author | titlecase}}
-        {{500 | currency:"INR"}}
-    </li>
-    <li>
-        <img src="{{src2}}" alt="{{name2}}" width="100">
-        {{name2}} by {{author}}
-        {{800 | currency:"INR"}}
-
-    </li>
-    <li>
-        <img src="{{src3}}" alt="{{name3}}" width="100">
-        {{name3}} by {{author3}}
-        {{900 | currency:"INR"}}
-
-    </li>
+<ul >
+    <!-- <li *ngFor="let book of books;let i=index">
+        {{i+1}}
+        <img src="{{book.src}}" alt="{{book.name}}" width="100">
+        {{book.name}} by {{book.author}}
+    </li> -->
+    <ng-container *ngFor="let book of books;let i=index">
+       
+   
+    <app-child-books [dataToChild]="book"></app-child-books>
+    </ng-container>
 </ul>
-<!-- <input type="text" name="name" [(ngModel)]="textname">
-<div>{{textname}}</div> -->
