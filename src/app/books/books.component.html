@@ -11,15 +11,20 @@
 <ul *ngIf="isShowing">
     <li>
         <img src="{{src}}" alt="{{name}}" width="100">
-        {{name}} by {{author}}
+        {{name | titlecase}} by {{author | titlecase}}
+        {{500 | currency:"INR"}}
     </li>
     <li>
         <img src="{{src2}}" alt="{{name2}}" width="100">
         {{name2}} by {{author}}
+        {{800 | currency:"INR"}}
+
     </li>
     <li>
         <img src="{{src3}}" alt="{{name3}}" width="100">
         {{name3}} by {{author3}}
+        {{900 | currency:"INR"}}
+
     </li>
 </ul>
 <!-- <input type="text" name="name" [(ngModel)]="textname">
