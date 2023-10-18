@@ -23,4 +23,10 @@ export class BooksComponent {
   }
 
   ]
+
+  AddtoCart(event:any){
+
+    console.log("I Am inside parent",event);
+
+  }
 }
