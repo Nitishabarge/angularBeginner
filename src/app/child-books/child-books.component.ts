@@ -1,5 +1,5 @@
 import { Component , Input } from '@angular/core';
-import {Book} from '../Interface/BookType'
+// import {Book} from '../Interface/BookType'
 
 @Component({
   selector: 'app-child-books',
@@ -7,5 +7,5 @@ import {Book} from '../Interface/BookType'
   styleUrls: ['./child-books.component.css']
 })
 export class ChildBooksComponent {
- @Input() dataToChild:Book = {} as Book
+ @Input() dataToChild :any
 }

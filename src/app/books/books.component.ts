@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import {Book} from '../Interface/BookType'
+//import {Book} from '../Interface/BookType'
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
   styleUrls: ['./books.component.css']
 })
 export class BooksComponent {
-  books:Book[]  = [{
+  books : any = [{
     name :"Fourth Wing",
     author:"Rebecca Yarros",
     src:"https://m.media-amazon.com/images/I/81im9aAFBOL._SL1500_.jpg",
