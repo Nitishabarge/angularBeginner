@@ -5,9 +5,13 @@
         <img src="{{book.src}}" alt="{{book.name}}" width="100">
         {{book.name}} by {{book.author}}
     </li> -->
-    <ng-container *ngFor="let book of books;let i=index">
+    <button (click)="isShowing = !isShowing">Toggle</button>
+
+    <ng-container *ngIf="isShowing">
+    <ng-container  *ngFor="let book of books;let i=index">
        
    
     <app-child-books [dataToChild]="book"  (dataEmitter)="AddtoCart($event)"></app-child-books>
     </ng-container>
+</ng-container>
 </ul>

@@ -17,4 +17,10 @@ export class ChildBooksComponent {
   // console.log(this.dataToChild);
   this.dataEmitter.emit(this.dataToChild);
  }
+
+ ngOnDestroy(){
+
+console.log("hahahah destoryed!!")
+
+ }
 }

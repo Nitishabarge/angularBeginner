@@ -23,10 +23,18 @@ export class BooksComponent {
   }
 
   ]
+  isShowing:boolean= true;
 
   AddtoCart(event:any){
 
     console.log("I Am inside parent",event);
+
+  }
+
+  ngOnInit(){
+
+alert("hello")
+
 
   }
 }
