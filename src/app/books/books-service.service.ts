@@ -1,8 +1,13 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+// @Injectable({
+//   providedIn: 'root'     //It means this service is global,no need to import in add module provider
+// })
+
+//To make this service private to specific module like book.module here we should remove providedIn from here , and import it in book.module provider
+
+@Injectable()
+
 export class BooksServiceService {
 
   constructor() { }
