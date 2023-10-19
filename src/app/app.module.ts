@@ -5,18 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BooksComponent } from './books/books.component';
 import { FormsModule } from '@angular/forms';
-import { ChildBooksComponent } from './child-books/child-books.component';
+import { ChildBooksComponent } from './books/child-books/child-books.component';
+import { BooksModule } from './books/books.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    BooksComponent,
-    ChildBooksComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BooksModule
   ],
   providers: [],
   bootstrap: [AppComponent]

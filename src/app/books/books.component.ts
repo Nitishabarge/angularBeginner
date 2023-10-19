@@ -25,8 +25,5 @@ export class BooksComponent {
 
   ngOnInit(){
 
-alert("hello")
-
-
   }
 }
