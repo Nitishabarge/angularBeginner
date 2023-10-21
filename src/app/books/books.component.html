@@ -1,10 +1,5 @@
 
 <ul >
-    <!-- <li *ngFor="let book of books;let i=index">
-        {{i+1}}
-        <img src="{{book.src}}" alt="{{book.name}}" width="100">
-        {{book.name}} by {{book.author}}
-    </li> -->
     <button (click)="isShowing = !isShowing">Toggle</button>
 
     <ng-container *ngIf="isShowing">
