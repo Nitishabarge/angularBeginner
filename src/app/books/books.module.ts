@@ -11,7 +11,7 @@ import { BooksServiceService } from './books-service.service';
   imports: [
     CommonModule
   ],
-  providers:[BooksServiceService],
+  providers:[],
   exports:[BooksComponent]
 })
 export class BooksModule { }

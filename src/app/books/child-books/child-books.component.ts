@@ -1,4 +1,6 @@
 import { Component , EventEmitter, Input,Output } from '@angular/core';
+import { BooksServiceService } from '../books-service.service';
+import { CartService } from 'src/app/services/cart.service';
 // import {Book} from '../Interface/BookType'
 
 @Component({
@@ -8,19 +10,13 @@ import { Component , EventEmitter, Input,Output } from '@angular/core';
 })
 export class ChildBooksComponent {
  @Input() dataToChild :any;
-
- @Output() dataEmitter = new EventEmitter<any>();
+ constructor(private  booksService : BooksServiceService, private cartService:CartService){}
 
 
   AddToCart(){
-  // console.log("hello");
-  // console.log(this.dataToChild);
-  this.dataEmitter.emit(this.dataToChild);
- }
-
- ngOnDestroy(){
-
-console.log("hahahah destoryed!!")
+   this.cartService.addService(this.dataToChild);
 
  }
+
+
 }

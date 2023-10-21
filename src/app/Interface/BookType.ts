@@ -1,4 +1,4 @@
-export interface Book {
+export interface BookType {
     name:string,
     author:string,
     src:string

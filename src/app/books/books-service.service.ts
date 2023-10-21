@@ -6,7 +6,9 @@ import { Injectable } from '@angular/core';
 
 //To make this service private to specific module like book.module here we should remove providedIn from here , and import it in book.module provider
 
-@Injectable()
+@Injectable({
+  providedIn:'platform'
+})
 
 export class BooksServiceService {
 
