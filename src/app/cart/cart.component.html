@@ -1,0 +1,14 @@
+<div class="container">
+<p>Your cart is here</p>
+<div >{{getBooks().length}}</div>
+
+
+<div>********Show Cart*********</div>
+<div *ngIf="getBooks().length > 0">
+<div *ngFor="let singlebook of getBooks()">
+<p>{{singlebook.name}}</p>
+
+</div>
+<div *ngIf="getBooks().length == 0">No books in your cart</div>
+
+</div>

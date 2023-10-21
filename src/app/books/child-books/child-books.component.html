@@ -3,4 +3,5 @@
 <img src="{{dataToChild.src}}" alt="{{dataToChild.name}}" width="100">
 {{dataToChild.name}} by {{dataToChild.author}}
 </li>
-<button (click)="AddToCart()">Add to cart</button>
+<button *ngIf="!isInCart" (click)="AddToCart()">Add to cart</button>
+<button *ngIf="isInCart" (click)="removeFromCart()">Remove from cart</button>

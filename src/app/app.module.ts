@@ -7,10 +7,12 @@ import { BooksComponent } from './books/books.component';
 import { FormsModule } from '@angular/forms';
 import { ChildBooksComponent } from './books/child-books/child-books.component';
 import { BooksModule } from './books/books.module';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

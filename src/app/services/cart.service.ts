@@ -7,15 +7,19 @@ export class CartService {
 
   constructor() { }
 
-cart :any = [];
+  cart: any = [];
 
 
 
-  addService(book:any){
-console.log("i am inside service",book)
-this.cart.push(book)
+  addService(book: any) {
+    this.cart.push(book)
   }
-  getService(book:any){
-    return book;
+  getService() {
+    return this.cart;
+  }
+
+  removeService(book: any) {
+    const index = this.cart.indexOf(book);
+    this.cart.splice(index, 1);
   }
 }

@@ -11,12 +11,15 @@ import { CartService } from 'src/app/services/cart.service';
 export class ChildBooksComponent {
  @Input() dataToChild :any;
  constructor(private  booksService : BooksServiceService, private cartService:CartService){}
-
+isInCart :boolean = false;
 
   AddToCart(){
    this.cartService.addService(this.dataToChild);
-
+   this.isInCart = true;
  }
-
+ removeFromCart(){
+  this.cartService.removeService(this.dataToChild);
+  this.isInCart = false;
+ }
 
 }
