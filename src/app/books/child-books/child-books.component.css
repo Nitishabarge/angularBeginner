@@ -1,0 +1,6 @@
+ul li {
+    list-style-type: none;
+}
+li > img {
+    max-width: 100px;
+}

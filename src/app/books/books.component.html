@@ -1,12 +1,9 @@
-
-<ul >
-    <button (click)="isShowing = !isShowing">Toggle</button>
-
-    <ng-container *ngIf="isShowing">
-    <ng-container  *ngFor="let book of books;let i=index">
-       
-   
-    <app-child-books [dataToChild]="book"  ></app-child-books>
+<button (click)="isShowing = !isShowing">Toggle</button>
+<div class="flex flex-row">
+ <ng-container *ngIf="isShowing">
+        <ng-container *ngFor="let book of books;let i=index">
+<app-child-books [dataToChild]="book"></app-child-books>
+        </ng-container>
     </ng-container>
-</ng-container>
-</ul>
+
+</div>

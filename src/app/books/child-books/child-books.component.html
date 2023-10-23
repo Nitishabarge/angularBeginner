@@ -1,7 +1,10 @@
 <!-- {{i+1}} -->
-<li>
-<img src="{{dataToChild.src}}" alt="{{dataToChild.name}}" width="100">
-{{dataToChild.name}} by {{dataToChild.author}}
+<ul>
+<li class="px-5">
+<img src="{{dataToChild.src}}" alt="{{dataToChild.name}}" >
+<p>{{dataToChild.name}} by {{dataToChild.author}}</p>
+
+<button *ngIf="!isInCart" (click)="AddToCart()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded">Add to cart</button>
+<button *ngIf="isInCart" (click)="removeFromCart()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded">Remove from cart</button>
 </li>
-<button *ngIf="!isInCart" (click)="AddToCart()">Add to cart</button>
-<button *ngIf="isInCart" (click)="removeFromCart()">Remove from cart</button>
+</ul>
