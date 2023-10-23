@@ -8,17 +8,21 @@ import { FormsModule } from '@angular/forms';
 import { ChildBooksComponent } from './books/child-books/child-books.component';
 import { BooksModule } from './books/books.module';
 import { CartComponent } from './cart/cart.component';
+import { AuthModuleModule } from './auth/auth-module/auth-module.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    CartComponent
+    CartComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BooksModule
+    BooksModule,
+    AuthModuleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
