@@ -13,4 +13,9 @@ export class LoginComponent {
     password: ""
 
   }
+  onSubmit(){
+
+    console.log("form submiteed");
+    console.log(this.form);
+  }
 }
