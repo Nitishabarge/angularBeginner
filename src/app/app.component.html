@@ -1,23 +1,35 @@
 <div class="container px-5">
 
 
-<ul class="flex">
+  <ul class="flex" *ngIf="isAuthenticated()">
     <li class="-mb-px mr-1">
-      <a class="bg-white inline-block border-l border-t border-r rounded-t py-2 px-4 text-blue-700 font-semibold" routerLink="/">Home</a>
+      <a class="bg-white inline-block border-l border-t border-r rounded-t py-2 px-4 text-blue-700 font-semibold"
+        routerLink="/">Home</a>
     </li>
     <li class="mr-1">
-      <a class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" routerLink="/cart">Cart</a>
+      <a class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold"
+        routerLink="/cart">Cart</a>
     </li>
-    <li class="mr-1">
-        <a class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" routerLink="/login">Login</a>
+    <ng-container *ngIf="isAuthenticated()">
+      <li class="mr-1">
+        <!-- <a class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" routerLink="/">Logout</a> -->
+        <button (click)="logout()"
+          class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold">Logout</button>
+      </li>
+    </ng-container>
+  </ul>
+  <ul class="flex" *ngIf="!isAuthenticated()">
+    <ng-container>
+      <li class="mr-1">
+        <a class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold"
+          routerLink="/login">Login</a>
       </li>
       <li class="mr-1">
-        <a class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" routerLink="/register">Register</a>
+        <a class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold"
+          routerLink="/register">Register</a>
       </li>
-   
+    </ng-container>
   </ul>
   
-
-
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 </div>
