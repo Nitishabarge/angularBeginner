@@ -6,9 +6,9 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 
 const routes: Routes = [
-  {path:"",component:BooksComponent},
+  {path:"",component:LoginComponent},
+  {path:"books",component:BooksComponent},
   {path:"cart",component:CartComponent},
-  {path:"login",component:LoginComponent},
   {path:"register",component:RegisterComponent},
 ];
 
