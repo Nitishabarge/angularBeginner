@@ -12,7 +12,6 @@ export class AuthService {
 
     if (form.email === "nitisha@gmail.com" && form.password === "12345") {
        this.isAuthenticated = true;
-       console.log('I am here Gaurav barge');
        this.router.navigate(['books'])
     }
   }

@@ -12,7 +12,7 @@ export class ChildBooksComponent {
  @Input() dataToChild :any;
  constructor(private  booksService : BooksServiceService, private cartService:CartService){}
 isInCart :boolean = false;
-
+DataToParent:string ="send data to parent with viewchild";
   AddToCart(){
    this.cartService.addService(this.dataToChild);
    this.isInCart = true;
