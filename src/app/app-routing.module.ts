@@ -14,7 +14,7 @@ const routes: Routes = [
   {path:"cart",component:CartComponent,canActivate:[authGuard]},
   {path:"register",component:RegisterComponent},
   {path:"observable",component:ObservableExampleComponent},
-  {path:"booksdetails/:id",component:BooksDetailComponent},
+  {path:"booksdetails/:id/:id2/:id3",component:BooksDetailComponent},
 
 ];
 
