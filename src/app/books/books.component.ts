@@ -26,10 +26,16 @@ books : any = [
     this.cd.detectChanges();
   }
 
+  goToObservable(data : any){
+ this.router.navigate(['/observable',data])
 
+//this.router.navigate(['/observable',{queryParams:"nitisha"}])
+  }
  
   isShowing:boolean= true;
 
 
- 
+  ngOnInit(){
+this.goToObservable({data:"nitisha"});
+  }
 }

@@ -11,6 +11,13 @@ export class ObservableExampleComponent {
 
 constructor(private route:ActivatedRoute){
  
+
+  this.route.params.subscribe(params=>{
+this.data = params['data']
+
+  })
+  console.log("data===",this.data)
+
 }
 
 
