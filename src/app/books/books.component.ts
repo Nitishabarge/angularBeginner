@@ -2,6 +2,8 @@ import { Component, ViewChild, AfterViewInit, ChangeDetectorRef } from '@angular
 import { BooksServiceService } from './books-service.service';
 import { ChildBooksComponent } from './child-books/child-books.component';
 //import {Book} from '../Interface/BookType'
+import {Router} from '@angular/router';
+
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
@@ -12,7 +14,10 @@ export class BooksComponent implements AfterViewInit {
 @ViewChild(ChildBooksComponent) child !: ChildBooksComponent;
 
 message:string= "";
-  constructor(private  booksService : BooksServiceService,private cd : ChangeDetectorRef){
+books : any = [
+
+]
+  constructor(private  booksService : BooksServiceService,private cd : ChangeDetectorRef,private router:Router){
 
     this.books = this.booksService.getBooks();
   }
@@ -20,13 +25,11 @@ message:string= "";
     this.message = this.child.DataToParent;
     this.cd.detectChanges();
   }
-  books : any = [
 
-  ]
+
+ 
   isShowing:boolean= true;
 
 
-  ngOnInit(){
-
-  }
+ 
 }

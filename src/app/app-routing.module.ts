@@ -6,6 +6,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { authGuard } from './auth/auth.guard';
 import { ObservableExampleComponent } from './observable-example/observable-example.component';
+import { BooksDetailComponent } from './books/books-detail/books-detail.component';
 
 const routes: Routes = [
   {path:"",component:LoginComponent},
@@ -13,6 +14,8 @@ const routes: Routes = [
   {path:"cart",component:CartComponent,canActivate:[authGuard]},
   {path:"register",component:RegisterComponent},
   {path:"observable",component:ObservableExampleComponent},
+  {path:"booksdetails/:id",component:BooksDetailComponent},
+
 ];
 
 @NgModule({

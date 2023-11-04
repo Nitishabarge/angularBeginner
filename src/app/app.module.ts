@@ -10,6 +10,7 @@ import { BooksModule } from './books/books.module';
 import { CartComponent } from './cart/cart.component';
 import { AuthModuleModule } from './auth/auth-module/auth-module.module';
 import { ObservableExampleComponent } from './observable-example/observable-example.component';
+import { BooksDetailComponent } from './books/books-detail/books-detail.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ObservableExampleComponent } from './observable-example/observable-exam
     AppComponent,
     CartComponent,
     ObservableExampleComponent,
+    BooksDetailComponent,
    
   ],
   imports: [
